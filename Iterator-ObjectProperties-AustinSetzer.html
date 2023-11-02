@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iterators: Basic iterations and array methods</title>
+</head>
+<body>
+    <script>
+        // Define the "Person" object with "name"
+        const person = {
+            name: "Austin",
+            age: 30,
+            gender: "Male",
+            email: "austin@example.com",
+        };
+        // Print the value of the "name" property to the console.
+        console.log("Name:", person.name);
+
+        // Use dot notation to add a new property called "occupation" to the "person" object.
+        person.occupation = "Soldier";
+
+        // Use bracket notation to add a new property called "address" to the "person" object.
+        person["address"] = "123 Example Avenue, Example City";
+
+        // Use a for-in loop to iterate over the "person" object and print each property and its value to the console.
+            console.log("\nPrinting information:")
+        for (let iter in person) {
+            console.log(iter + ":", person[iter]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loops Example</title>
+</head>
+<body>
+    <script>
+        // Use a for loop to print 1-10 to the console, skipping 5:
+        console.log("\nPrinting numbers 1-10, skipping 5")
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5) {
+                continue; //skips 5
+            }
+            console.log(i);
+        }
+        console.log("\nPrinting even numbers 2-10, breaking on 8")
+        let j = 2;
+        while (j <= 10) {
+            if (j === 8) {
+                break; // Break the loop at 8
+            }
+            console.log(j);
+            j += 2;
+        }
+
+        // Use a for loop to iterate over an array of strings and print each string to the console, continuing to the next iteration if the string is empty.
+        console.log("\nIterating over an array of strings, skipping empty strings:");
+        const stringsArray = ["Hello", "", "Test", "", "Script"];
+        for (let k = 0; k < stringsArray.length; k++) {
+            if (stringsArray[k] === "") {
+                continue; // Skip empty strings
+            }
+            console.log(stringsArray[k]);
+        }
+    </script>
+</body>
+</html>

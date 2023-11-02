@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iterators: Basic iterations and array methods</title>
+</head>
+<body>
+    <script>
+        // Define the "Person" object with "name"
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        //Define a custom iterator for the "Person" object
+        Person.prototype[Symbol.iterator] = function () {
+            const properties = ["name","age"];
+            let index = 0;
+
+            return{
+                next: () => {
+                    if (index < properties.length) {
+                        const property = properties[index];
+                        index++;
+                        return {
+                            value:this[property],
+                            done: false
+                        };
+                    } else{
+                        return {done: true}
+                    }
+                }
+            };
+        };
+        // Create two instances of the "Person" object and add them to an array.
+        const peopleArray = [
+            new Person("Austin", 25),
+            new Person("John", 30)
+        ];
+        // Use a for-of loop to iterate over the array and print the name and age of each person to the console.
+        for (const person of peopleArray) {
+            console.log("Name:", person.name);
+            console.log("Age:", person.age);
+        }
+    </script>
+</body>
+</html>

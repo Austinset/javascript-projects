@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iterators: Basic iterations and array methods</title>
+</head>
+<body>
+    <script>
+        // Define a class called "Animal" with name and age properties
+    class Animal {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        
+        speak() {
+            console.log("The animal makes a sound!");
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name, age, breed) {
+            super(name, age); // Call the constructor of the parent class
+            this.breed = breed;
+        }
+    
+    // Override the speak method to provide a different message.
+    speak() {
+        console.log(`${this.name} the ${this.breed} barks!`)
+        }
+    }
+    // Create an instance of the "Dog" Class and call the "speak" method.
+    const myDog = new Dog("Buddy", 3, "Golden Retriever");
+    myDog.speak();
+    </script>
+</body>
+</html>

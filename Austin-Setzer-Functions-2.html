@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <title>JavaScript Functions Exercise 1</title> </head>
+    <body>
+        <script>
+                // Define a function called "double" that takes a single parameter, "num", and returns its double.
+            function double(num) {
+                return num * 2;
+        }
+
+                // Define a function called "triple" that takes a single parameter, "num", and returns its triple.
+            function triple(num2) {
+                return num2 * 3;
+        }
+
+                // Define a function called "apply" that takes two parameters: a number and a function.
+                    // The function should call the input function with the number as an argument and return the result.
+            function apply(num3, func) {
+                return func(num3);
+        }
+
+                // Call the "apply" function with a number and the "double" function as arguments, and print the result to the console.
+            let result1 = apply(5, double);
+                console.log(`Result of 'double' function: ${result1}`);
+
+                // Call the "apply" function with a number and the "triple" function as arguments, and print the result to the console.
+            let result2 = apply(20, triple);
+                console.log(`Result of applying 'triple' function: ${result2}`);
+        </script>
+    </body>

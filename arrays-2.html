@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Arrays Assignment 2</title>
+</head>
+<body>
+    <script>
+        // 1. Create an empty array called "fruits".
+        let fruits = [];
+
+        // 2. Use the push method to add "apple", "banana", "pear", and "strawberry" onto the array. Output your fruits array to the console.
+        fruits.push("apple", "banana", "pear", "strawberry");
+        console.log("Fruits array:", fruits);
+
+        // 3. Use the "join" method to join the elements of the array into a single string, separated by commas, and output it to the console.
+        let fruitsString = fruits.join(", ");
+        console.log("Fruits as a string:", fruitsString);
+
+        // 4. Use the "slice" method to create a new array that contains the elements from index 1 to index 3 of the original array, and store this new array in a variable called "someFruits".
+        let someFruits = fruits.slice(1, 4);
+
+        // 5. Use the "splice" method to remove the element at index 2 from the someFruits array.
+        someFruits.splice(1, 1);
+
+        // 6. Output the someFruits array to the console.
+        console.log("SomeFruits array:", someFruits);
+
+        // 5. Create another array called "moreFruits" with the values "papaya", "guava", and "jackfruit".
+        let moreFruits = ["papaya", "guava", "jackfruit"];
+
+        // 5. Use the "concat" method to concatenate the fruits array with the moreFruits array. Output the fruits array to the console.
+        fruits = fruits.concat(moreFruits);
+        console.log("Concat fruits array:", fruits);
+
+        // 6. Use the "indexOf" method to find the index of "papaya" in the array, and output it to the console.
+        let indexOfPapaya = fruits.indexOf("papaya");
+        console.log("Index of 'papaya' in the fruits array:", indexOfPapaya);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Loops</title>
+</head>
+<body>
+    <h1>JavaScript Loops</h1>
+    <script>
+        // Task 1: Use a for loop to print numbers from 1 to 10, skipping 5
+        console.log("Task 1:");
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5) {
+                continue;
+            }
+            console.log(i);
+        }
+
+        // Task 2: Use a while loop to print even numbers from 2 to 10, break at 8
+        console.log("\nTask 2:");
+        let j = 2;
+        while (j <= 10) {
+            if (j === 8) {
+                break;
+            }
+            console.log(j);
+            j += 2;
+        }
+
+        // Task 3: Use a for loop to iterate over an array of strings
+        console.log("\nTask 3:");
+        const stringArray = ["Hello", "", "World", "", "JavaScript"];
+        for (let k = 0; k < stringArray.length; k++) {
+            if (stringArray[k] === "") {
+                continue;
+            }
+            console.log(stringArray[k]);
+        }
+    </script>
+</body>
+</html>
